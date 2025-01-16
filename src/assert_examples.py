@@ -49,14 +49,14 @@ def delete_file(filename: str) -> None | FileNotFoundError:
         raise FileNotFoundError(f"File {filename} not found")
     
 
-def validate_email(email: str) -> bool | InvalidEmailError:
+def validate_email(email: str) -> bool | invalid_email_error:
     """
     Validates an email address  
   
     Raises:  
-        InvalidEmailError: If the email address is invalid
+        invalid_email_error: If the email address is invalid
     """
     if re.match(r"[^@]+@[^@]+\.[^@]+", email):
         return True
     else:
-        raise InvalidEmailError("Invalid email adress")
+        raise invalid_email_error("Invalid email adress")

@@ -37,7 +37,7 @@ def test_delete_file_not_found_error():
 
 def test_validate_email_value_error():
     """
-    Test that an InvalidEmailError is raised when the email address is invalid  
+    Test that an invalid_email_error is raised when the email address is invalid  
     """
     with pytest.raises(invalid_email_error) as excinfo:
         validate_email("invalid_email")
