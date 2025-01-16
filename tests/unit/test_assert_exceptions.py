@@ -42,3 +42,32 @@ def test_validate_email_value_error():
     with pytest.raises(invalid_email_error) as excinfo:
         validate_email("invalid_email")
     assert str(excinfo.value) == "Invalid email adress"
+
+
+def test_division_no_exception_raised():
+    """
+    Test that no exception is raised when the second argument is not 0
+    """
+    try:
+        division(1, 1)
+    except Exception as excinfo:
+        pytest.fail(f"Unexpected exception raised: {excinfo}")
+
+
+def test_square_root_no_exception_raised():
+    """
+    Test that no exception is raised when the argument is not negative
+    """
+    try:
+        square_root(1)
+    except Exception as excinfo:
+        pytest.fail(f"Unexpected exception raised: {excinfo}")
+
+
+def test_square_root_division_multiple_exceptions():
+    """
+    Test that multiple exceptions can be asserted in a single test
+    """
+    with pytest.raises((ValueError, ZeroDivisionError)) as excinfo:
+        square_root(-1)
+    assert str(excinfo.value) == "Square root of negative numbers is not allowed"

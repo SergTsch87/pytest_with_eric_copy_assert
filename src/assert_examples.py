@@ -1,5 +1,6 @@
-# Відступи зроблено засобами black
-import os, math, re
+import os
+import math
+import re
 
 
 class invalid_email_error(Exception):
