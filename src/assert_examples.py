@@ -2,7 +2,7 @@
 import os, math, re
 
 
-class invalid_mail_error(Exception):
+class invalid_email_error(Exception):
     """
     Raised when an email address is invalid
     """
