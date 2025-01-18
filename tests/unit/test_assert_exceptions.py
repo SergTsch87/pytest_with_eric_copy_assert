@@ -8,6 +8,10 @@ from src.assert_examples import(
 )
 
 
+def temp_func_on_server():
+    pass
+
+
 def test_division_zero_division_error():
     """
     Test that a ZeroDivisionError is raised when the second argument is 0  
